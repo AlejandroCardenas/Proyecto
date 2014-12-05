@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MOTA" Class="MotaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\ORIALIZ\Desktop\proyectoDA\proyectoDA\ProctoSaludOcupacional\ProctoSaludOcupacional\MOTA.mdf;Integrated Security=True" SettingsObjectName="SaludOcupacional.Properties.Settings" SettingsPropertyName="MOTAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CLINICA" Member="CLINICA">
+    <Type Name="CLINICA">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CLINICA" Member="CLINICA1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="CLINICA_Examen" Member="Examen" ThisKey="Id" OtherKey="CLINICA" Type="Examen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EstadCiv" Member="EstadCiv">
+    <Type Name="EstadCiv">
+      <Column Name="IdEC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EstadoCivil" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="EstadCiv_Trabajador" Member="Trabajador" ThisKey="IdEC" OtherKey="EstadoCivil" Type="Trabajador" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estado" Member="Estado">
+    <Type Name="Estado">
+      <Column Name="IdEstado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Estado" Member="Estado1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Estado_Examen" Member="Examen" ThisKey="IdEstado" OtherKey="Estado" Type="Examen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Examen" Member="Examen">
+    <Type Name="Examen">
+      <Column Name="IdExamen" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdTrabajador" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TipoExamen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Odontologia" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Presion Arterial]" Member="Presion_Arterial" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EKG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Psicologico" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Esfuerzo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PSA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Orina" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="HIV" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Cocaina" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Marihuana" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Psicosensometrico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ergonometria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Asceenso a grandes altitudes]" Member="Asceenso_a_grandes_altitudes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Trabajos de Riesgo]" Member="Trabajos_de_Riesgo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERFIL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RESTRICCIONES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLINICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Examen_TAlertas" Member="TAlertas" ThisKey="IdExamen" OtherKey="Examen" Type="TAlertas" />
+      <Association Name="CLINICA_Examen" Member="CLINICA1" ThisKey="CLINICA" OtherKey="Id" Type="CLINICA" IsForeignKey="true" />
+      <Association Name="Estado_Examen" Member="Estado1" ThisKey="Estado" OtherKey="IdEstado" Type="Estado" IsForeignKey="true" />
+      <Association Name="PERFIL_Examen" Member="PERFIL1" ThisKey="PERFIL" OtherKey="Id" Type="PERFIL" IsForeignKey="true" />
+      <Association Name="Tipo_EMO_Examen" Member="Tipo_EMO" ThisKey="TipoExamen" OtherKey="IDEmo" Type="Tipo_EMO" IsForeignKey="true" />
+      <Association Name="Trabajador_Examen" Member="Trabajador" ThisKey="IdTrabajador" OtherKey="IdTrabajador" Type="Trabajador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExamenReferencia" Member="ExamenReferencia">
+    <Type Name="ExamenReferencia">
+      <Column Name="ExamenReferencia" Member="ExamenReferencia1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="ExamenReferencia_TAlertas" Member="TAlertas" ThisKey="ExamenReferencia1" OtherKey="ExamenReferencia" Type="TAlertas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERFIL" Member="PERFIL">
+    <Type Name="PERFIL">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TIPO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="PERFIL_Examen" Member="Examen" ThisKey="Id" OtherKey="PERFIL" Type="Examen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sexo" Member="Sexo">
+    <Type Name="Sexo">
+      <Column Name="IDSex" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sexo" Member="Sexo1" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Sexo_Trabajador" Member="Trabajador" ThisKey="IDSex" OtherKey="Sexo" Type="Trabajador" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAlertas" Member="TAlertas">
+    <Type Name="TAlertas">
+      <Column Name="IdAlerta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExamenReferencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Examen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Detalle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Examen_TAlertas" Member="Examen1" ThisKey="Examen" OtherKey="IdExamen" Type="Examen" IsForeignKey="true" />
+      <Association Name="ExamenReferencia_TAlertas" Member="ExamenReferencia1" ThisKey="ExamenReferencia" OtherKey="ExamenReferencia1" Type="ExamenReferencia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tipo_EMO" Member="Tipo_EMO">
+    <Type Name="Tipo_EMO">
+      <Column Name="IDEmo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Tipo_EMO_Examen" Member="Examen" ThisKey="IDEmo" OtherKey="TipoExamen" Type="Examen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Trabajador" Member="Trabajador">
+    <Type Name="Trabajador">
+      <Column Name="IdTrabajador" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Fotocheck" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DNI" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ApellidoPaterno" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ApellidoMaterno" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NombreP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NombreS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Area" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PuestodeTrabajo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstadoCivil" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Peso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Talla" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Trabajador_Examen" Member="Examen" ThisKey="IdTrabajador" OtherKey="IdTrabajador" Type="Examen" />
+      <Association Name="EstadCiv_Trabajador" Member="EstadCiv" ThisKey="EstadoCivil" OtherKey="IdEC" Type="EstadCiv" IsForeignKey="true" />
+      <Association Name="Sexo_Trabajador" Member="Sexo1" ThisKey="Sexo" OtherKey="IDSex" Type="Sexo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

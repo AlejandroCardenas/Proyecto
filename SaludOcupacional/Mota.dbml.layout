@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Mota">
+  <DataContextMoniker Name="/MotaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8f133423-5634-4b60-923f-9a7e7dfe1f01" isExpanded="false" absoluteBounds="3.875, 1.5, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/CLINICA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="654a512b-5a83-4eab-a410-cca2c21e75b6" absoluteBounds="3.89, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="faf5ab5a-5ad1-4b74-acc3-c8c8e7b9a526" isExpanded="false" absoluteBounds="4.875, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/EstadCiv" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc0236aa-1a25-44fa-83eb-733d684a4564" absoluteBounds="4.8900000000000006, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1df27e6b-463c-407a-8863-4e2d514cad75" isExpanded="false" absoluteBounds="1.25, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/Estado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f2725f4-59d7-40ce-810a-991af9e74d1c" absoluteBounds="1.2650000000000001, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7100ab43-f466-4613-beb3-bc9d16f9fc42" isExpanded="false" absoluteBounds="2.5, 3, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/Examen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="730860c1-a4d3-4029-8d58-a3b5e37fb7da" absoluteBounds="2.515, 3.46, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.1875 : 1.95); (4.1875 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/CLINICA/CLINICA_Examen" />
+      <nodes>
+        <classShapeMoniker Id="8f133423-5634-4b60-923f-9a7e7dfe1f01" />
+        <classShapeMoniker Id="7100ab43-f466-4613-beb3-bc9d16f9fc42" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.90625 : 2.2); (2.90625 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/Estado/Estado_Examen" />
+      <nodes>
+        <classShapeMoniker Id="1df27e6b-463c-407a-8863-4e2d514cad75" />
+        <classShapeMoniker Id="7100ab43-f466-4613-beb3-bc9d16f9fc42" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f65f6f09-ebc2-4197-b0db-38310bb351d3" isExpanded="false" absoluteBounds="5, 2.875, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/ExamenReferencia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="603383c8-f246-44d4-b2c6-332f6acd456e" absoluteBounds="5.015, 3.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62e51f79-4f65-48c4-8caa-245ae25aa09d" isExpanded="false" absoluteBounds="1.25, 4.125, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/PERFIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55876742-96be-48fe-8d95-9e67c3742e0e" absoluteBounds="1.2650000000000001, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 4.125); (2.875 : 3.45)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/PERFIL/PERFIL_Examen" />
+      <nodes>
+        <classShapeMoniker Id="62e51f79-4f65-48c4-8caa-245ae25aa09d" />
+        <classShapeMoniker Id="7100ab43-f466-4613-beb3-bc9d16f9fc42" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="664ada59-866b-4a81-9ae3-1a590e7caab9" isExpanded="false" absoluteBounds="0.5, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/Sexo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5838a49c-842a-4a0d-adc9-11ed17c82156" absoluteBounds="0.51499999999999968, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="116faec6-b0cc-4397-83b8-9bd08ac85dea" isExpanded="false" absoluteBounds="4, 4, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/TAlertas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27e49648-9b73-425a-92b9-2bae87cf4b23" absoluteBounds="4.015, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 3.45); (4.25 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/Examen/Examen_TAlertas" />
+      <nodes>
+        <classShapeMoniker Id="7100ab43-f466-4613-beb3-bc9d16f9fc42" />
+        <classShapeMoniker Id="116faec6-b0cc-4397-83b8-9bd08ac85dea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.325); (5.5 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/ExamenReferencia/ExamenReferencia_TAlertas" />
+      <nodes>
+        <classShapeMoniker Id="f65f6f09-ebc2-4197-b0db-38310bb351d3" />
+        <classShapeMoniker Id="116faec6-b0cc-4397-83b8-9bd08ac85dea" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cab8bcd3-363a-41f1-be3e-d0ac2e572c27" isExpanded="false" absoluteBounds="0.5, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/Tipo_EMO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3472dd23-2ce5-46d0-876b-4d85a439e07d" absoluteBounds="0.515, 2.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.4999995 : 2.95); (1.4999995 : 3.225); (2.5 : 3.225)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/Tipo_EMO/Tipo_EMO_Examen" />
+      <nodes>
+        <classShapeMoniker Id="cab8bcd3-363a-41f1-be3e-d0ac2e572c27" />
+        <classShapeMoniker Id="7100ab43-f466-4613-beb3-bc9d16f9fc42" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3ccd7153-9a1e-4035-9e0c-cba1acb8bd36" isExpanded="false" absoluteBounds="2.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/MotaDataContext/Trabajador" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd45a0ea-772b-420e-bfa0-acc16d97da5f" absoluteBounds="2.5149999999999997, 0.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.5625 : 0.95); (3.5625 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/Trabajador/Trabajador_Examen" />
+      <nodes>
+        <classShapeMoniker Id="3ccd7153-9a1e-4035-9e0c-cba1acb8bd36" />
+        <classShapeMoniker Id="7100ab43-f466-4613-beb3-bc9d16f9fc42" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 0.725); (4.5 : 0.725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/EstadCiv/EstadCiv_Trabajador" />
+      <nodes>
+        <classShapeMoniker Id="faf5ab5a-5ad1-4b74-acc3-c8c8e7b9a526" />
+        <classShapeMoniker Id="3ccd7153-9a1e-4035-9e0c-cba1acb8bd36" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.4999995 : 1.125); (1.4999995 : 0.725); (2.5 : 0.725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MotaDataContext/Sexo/Sexo_Trabajador" />
+      <nodes>
+        <classShapeMoniker Id="664ada59-866b-4a81-9ae3-1a590e7caab9" />
+        <classShapeMoniker Id="3ccd7153-9a1e-4035-9e0c-cba1acb8bd36" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

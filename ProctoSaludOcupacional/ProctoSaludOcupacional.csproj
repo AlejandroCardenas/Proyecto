@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DCCBEE0-FF9A-4951-B615-E36DB3F81D73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProctoSaludOcupacional</RootNamespace>
+    <AssemblyName>ProctoSaludOcupacional</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ORIALIZ\Desktop\LOKO\ult\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D7B081A4AD7F3A436295A3858EE385152C726EAA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProctoSaludOcupacional_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertaDescripcion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlertaDescripcion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaAlerta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultaAlerta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAlerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlerta.Designer.cs">
+      <DependentUpon>FormAlerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAlertaRef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlertaRef.Designer.cs">
+      <DependentUpon>FormAlertaRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AgregarAlerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AgregarAlerta.Designer.cs">
+      <DependentUpon>AgregarAlerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BusquedaExamenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BusquedaExamenes.Designer.cs">
+      <DependentUpon>BusquedaExamenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BusquedaTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BusquedaTrabajador.Designer.cs">
+      <DependentUpon>BusquedaTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\IngresoClinica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\IngresoClinica.Designer.cs">
+      <DependentUpon>IngresoClinica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\IngresoExamen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\IngresoExamen.Designer.cs">
+      <DependentUpon>IngresoExamen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\IngresoTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\IngresoTrabajador.Designer.cs">
+      <DependentUpon>IngresoTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReporteAlerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteAlerta.Designer.cs">
+      <DependentUpon>ReporteAlerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedimientos.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteFinalAlerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteFinalAlerta.Designer.cs">
+      <DependentUpon>ReporteFinalAlerta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAlerta.resx">
+      <DependentUpon>FormAlerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAlertaRef.resx">
+      <DependentUpon>FormAlertaRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AgregarAlerta.resx">
+      <DependentUpon>AgregarAlerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BusquedaExamenes.resx">
+      <DependentUpon>BusquedaExamenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BusquedaTrabajador.resx">
+      <DependentUpon>BusquedaTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\IngresoClinica.resx">
+      <DependentUpon>IngresoClinica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\IngresoExamen.resx">
+      <DependentUpon>IngresoExamen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\IngresoTrabajador.resx">
+      <DependentUpon>IngresoTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteAlerta.resx">
+      <DependentUpon>ReporteAlerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportAlerta.rdlc" />
+    <EmbeddedResource Include="ReportAlertaRef.rdlc" />
+    <EmbeddedResource Include="ReporteFinalAlerta.resx">
+      <DependentUpon>ReporteFinalAlerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AlertaDescripcion.xsc">
+      <DependentUpon>AlertaDescripcion.xsd</DependentUpon>
+    </None>
+    <None Include="AlertaDescripcion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlertaDescripcion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AlertaDescripcion.xss">
+      <DependentUpon>AlertaDescripcion.xsd</DependentUpon>
+    </None>
+    <None Include="ConsultaAlerta.xsc">
+      <DependentUpon>ConsultaAlerta.xsd</DependentUpon>
+    </None>
+    <None Include="ConsultaAlerta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsultaAlerta.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConsultaAlerta.xss">
+      <DependentUpon>ConsultaAlerta.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProctoSaludOcupacional_ClaveTemporal.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database11.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MOTA.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mota.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MOTA_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceca40.dll" />
+    <Content Include="sqlcecompact40.dll" />
+    <Content Include="sqlceer40EN.dll" />
+    <Content Include="sqlceer40ES.dll" />
+    <Content Include="sqlceme40.dll" />
+    <Content Include="sqlceoledb40.dll" />
+    <Content Include="sqlceqp40.dll" />
+    <Content Include="sqlcese40.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SaludOcupacional\SaludOcupacional.csproj">
+      <Project>{291ad9f2-744f-4c99-b1c7-2f46af5b454e}</Project>
+      <Name>SaludOcupacional</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
